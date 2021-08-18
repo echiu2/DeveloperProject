@@ -7,6 +7,7 @@ import random
 from django.shortcuts import render
 from services.services import google_sheet
 from django.template.defaulttags import register
+from api_key import API_KEY
 # from myapp.models import Location
 
 #dictionary for icons
@@ -21,9 +22,7 @@ d = {
 }
 
 atmosphere = ['Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Dust', 'Ash', 'Squall', 'Tornado']
-# api_key = "ea28a5f31255e50647af6bcf50377941"
-api_key = "2ec45f60e91ca112feaa654baf6764cc"
-# api_key ="a5ecef3ba4c08c8a0fc220cdf34aa40e"
+api_key = API_KEY
 locations = google_sheet()
 
 @register.filter
