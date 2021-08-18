@@ -21,7 +21,10 @@ d = {
 }
 
 atmosphere = ['Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Dust', 'Ash', 'Squall', 'Tornado']
-api_key = "ea28a5f31255e50647af6bcf50377941"
+# api_key = "ea28a5f31255e50647af6bcf50377941"
+# api_key = "2ec45f60e91ca112feaa654baf6764cc"
+api_key ="a5ecef3ba4c08c8a0fc220cdf34aa40e"
+
 locations = google_sheet()
 
 @register.filter
@@ -70,10 +73,12 @@ async def search(request):
         location_res = await asyncio.gather(*actions)
 
         # Iterate through location information that correspondings to searched weather
-        for location, data in zip(city_state, location_res):
+        for location, data in zip(city_state[:60], location_res[:60]):
             #If api calls exceeds limit of 60 then api key will potentially be suspended and location_res returns 404 status code
             if data['cod'] == '404':
                 continue
+            if data['cod'] == '424':
+                return render(request, "myapp/error.html")
             #Check if searched string equals api response main weather
             elif data['weather'][0]['main'].lower() == search.lower():
                 weathers = {

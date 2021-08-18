@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<a href="{% url 'home' %}" style="float:left"><button class="btn btn-secondary btn-sm">back</button></a>
 <center>
+  <a href="{% url 'home' %}"><button class="btn btn-secondary btn-sm">back</button></a>
+  {% if weathers|length == 0 %}
+    <h4>No Results for {{search}}</h4><img src="http://openweathermap.org/img/wn/{{ icon }}@2x.png">
+  {% else %}
     <h4>Search Results for {{search}}</h4><img src="http://openweathermap.org/img/wn/{{ icon }}@2x.png">
     {% for weather in weathers|batch:4%}
     <div class="row spaceOver">
@@ -17,6 +20,7 @@
         {% endfor %}
     </div>
     {% endfor %}
+  {% endif %}
 </center>
 {% endblock content %}
 
