@@ -25,7 +25,7 @@ Search Page: Displays locations that match the weather conditions searched.
 - Create a virtual environment for the project folder by running this command: ```python3 -m venv <myenvname>``` or ```py -m venv <myenvname>```.
 - Once you have your virtual environment created, activate virtual env by running: ```source /<myenvname>/bin/activate``` in terminal or ```<myenvname>\Scripts\activate``` on windows cmd.
 - Download dependencies in the requirement.txt file by running this command: ```pip3 install -r requirements.txt```
-- Go to project folder and run ```python3 manage.py runserver``` or ```py3 manage.py runserver``` to run program
+- Go to project folder and run ```python3 manage.py runserver``` or ```python manage.py runserver``` or ```py3 manage.py runserver``` to run program
 - Finally, go your browser and type http://127.0.0.1:8000/ in the address field.
  
 *************************
