@@ -70,7 +70,7 @@ async def search(request):
         # return event loop to get all location weather information from api
         location_res = await asyncio.gather(*actions)
         # Iterate through location information that correspondings to searched weather
-        for location, data in zip(city_state[:60], location_res[:60]):
+        for location, data in zip(city_state, location_res):
             #If api calls exceeds limit of 60 then api key will potentially be suspended and location_res returns 404 status code
             if data['cod'] == '404':
                 continue
