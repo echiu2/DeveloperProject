@@ -1,6 +1,6 @@
 # DeveloperProject
 
- ******** Note **********
+*************************
  
 All keys to openweathermap.org and google sheet api are hardcoded into the program; did not separate keys to these API in a different file (not the best practice), therefore repository is private to only trusted inviduals.
 
@@ -11,7 +11,7 @@ How to run the website:
 - Once you have your virtual environment created, download dependencies in the requirement.txt file by running this command: pip3 install -r requirements.txt
 - Go to project folder and run python3 manage.py runserver to run program
  
-
+*************************
 Future Considerations:
 
 1. What features should be implemented in future versions?
