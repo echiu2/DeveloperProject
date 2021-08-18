@@ -1,14 +1,14 @@
 # DeveloperProject
 
 *************************
-Overview:
+# Overview:
 
 A simple website that allows a user to search up certain weather conditions. The website consumes data from the openweathermap API and thus the search will return a list of locations that are experiencing the weather condition that the user searched.
 
 Notes: All keys to openweathermap.org and google sheet api are hardcoded into the program; did not separate keys to these API in a different file (not the best practice).
 
 *************************
-Preview:
+# Preview:
 
 Home Page: Displays dropdown search bar and the top 250 us cities from the google sheet.
 <img width="600" alt="Screen Shot 2021-08-17 at 11 04 36 PM" src="https://user-images.githubusercontent.com/22754752/129831212-166bd6f6-2034-4e58-a32b-c8054f68ba87.png">
@@ -18,17 +18,18 @@ Search Page: Displays locations that match the weather conditions searched.
 
 
 *************************
-How to run the website:
-- Clone project repository by running: ```git clone <repository-name>``` into a local machine project folder
-- Install Python3 into local machine: https://www.python.org/downloads/ or run ```brew install python3``` on Macos. 
+# How to run the website:
+- Clone project repository by running: ```git clone <repository-name>``` into a local machine with your github credentials.
+- Install Python3 into local machine: https://www.python.org/downloads/ or run ```brew install python3``` on Macos if you have brew installed. 
+- Go into developer_project directory.
 - Create a virtual environment for the project folder by running this command: ```python3 -m venv <myenvname>``` or ```py -m venv <myenvname>```.
 - Once you have your virtual environment created, activate virtual env by running: ```source /<myenvname>/bin/activate``` in terminal or ```<myenvname>\Scripts\activate``` on windows cmd.
 - Download dependencies in the requirement.txt file by running this command: ```pip3 install -r requirements.txt```
-- Go to project folder and run ```python3 manage.py runserver``` or ```py3 manage.py runserver``` to run program
+- Go to project folder and run ```python3 manage.py runserver``` or ```python manage.py runserver``` or ```py3 manage.py runserver``` to run program
 - Finally, go your browser and type http://127.0.0.1:8000/ in the address field.
  
 *************************
-Future Considerations:
+# Future Considerations:
 
 1. What features should be implemented in future versions?
 - I was thinking of implementing single pages for separate city in case a user just wanted to check information for only one city and not have the page too busy.
