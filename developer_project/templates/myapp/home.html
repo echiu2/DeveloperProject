@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container spaceOver">
+  <center>
+    <h4>Top 250 Cities in the United States</h4>
+  </center>
+  {% for location in locations|batch:4%}
+  <div class="row spaceOver">
+    {% for col in location %}
+      <div class="col-sm-4 col-md-3">
+        <div class="card">
+          <div class="header">
+            {{ col.City }}, {{ col.State }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}
