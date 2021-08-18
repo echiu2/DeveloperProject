@@ -1,8 +1,20 @@
 # DeveloperProject
 
 *************************
- 
-All keys to openweathermap.org and google sheet api are hardcoded into the program; did not separate keys to these API in a different file (not the best practice), therefore repository is private to only trusted inviduals.
+Overview:
+
+A simple website that allows a user to search up certain weather conditions. The website consumes data from the openweathermap API and thus the search will return a list of locations that are experiencing the weather condition that the user searched.
+
+Notes: All keys to openweathermap.org and google sheet api are hardcoded into the program; did not separate keys to these API in a different file (not the best practice).
+
+
+*************************
+Preview:
+
+<img width="1434" alt="Screen Shot 2021-08-17 at 11 04 36 PM" src="https://user-images.githubusercontent.com/22754752/129831212-166bd6f6-2034-4e58-a32b-c8054f68ba87.png">
+
+<img width="1435" alt="Screen Shot 2021-08-17 at 11 08 29 PM" src="https://user-images.githubusercontent.com/22754752/129831245-2c429b3f-9088-4829-97be-598ba23a2b32.png">
+
 
 *************************
 How to run the website:
@@ -27,4 +39,5 @@ Future Considerations:
  
 3. What could break this current version?
 - A requests of 10000 api calls at a time may slow down or program or even break it. 
-- The current free API version only allows 60 calls a min, so this could potentially break program by making key unusable for a certain period of time. This also can make my program susceptibles to errors since a non-working api key will cause of a lot of my values to be length 0 or None, which would cause website to display nothing to show error page.
+- The current free API version only allows 60 calls a min, so this could potentially break program by making key unusable for a certain period of time. This also can make my program susceptibles to errors since a non-working api key will cause of a lot of my values to be length 0 or None, which would cause website to display nothing or show error page.
+- API are always changing therefore a change in the structure of the openweathermap API json response can cause my website to break because of the way I iterated through the response.
