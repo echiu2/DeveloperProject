@@ -6,10 +6,10 @@ All keys to openweathermap.org and google sheet api are hardcoded into the progr
 
 *************************
 How to run the website:
-- Clone project repository by running: git clone <repository-name> into a local machine project folder
-- Create a virtual environment for the project folder by running this command: python3 -m venv <myenvname>
-- Once you have your virtual environment created, download dependencies in the requirement.txt file by running this command: pip3 install -r requirements.txt
-- Go to project folder and run python3 manage.py runserver to run program
+- Clone project repository by running: ```git clone <repository-name> ```into a local machine project folder
+- Create a virtual environment for the project folder by running this command: ```python3 -m venv <myenvname>```
+- Once you have your virtual environment created, download dependencies in the requirement.txt file by running this command: ```pip3 install -r requirements.txt```
+- Go to project folder and run ```python3 manage.py runserver``` to run program
  
 *************************
 Future Considerations:
