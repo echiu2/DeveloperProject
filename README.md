@@ -19,10 +19,12 @@ Search Page: Displays locations that match the weather conditions searched.
 
 *************************
 How to run the website:
-- Clone project repository by running: ```git clone <repository-name> ```into a local machine project folder
+- Clone project repository by running: ```git clone <repository-name>``` into a local machine project folder
 - Create a virtual environment for the project folder by running this command: ```python3 -m venv <myenvname>```
-- Once you have your virtual environment created, download dependencies in the requirement.txt file by running this command: ```pip3 install -r requirements.txt```
+- Once you have your virtual environment created, activate virtual env by running: ```source /<myenvname>/bin/activate```
+- Download dependencies in the requirement.txt file by running this command: ```pip3 install -r requirements.txt```
 - Go to project folder and run ```python3 manage.py runserver``` to run program
+- Finally, go your browser and type http://127.0.0.1:8000/ in the address field.
  
 *************************
 Future Considerations:
