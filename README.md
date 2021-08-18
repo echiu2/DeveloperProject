@@ -21,7 +21,7 @@ Search Page: Displays locations that match the weather conditions searched.
 # How to run the website:
 - Clone project repository by running: ```git clone <repository-name>``` into a local machine with your github credentials.
 - Install Python3 into local machine: https://www.python.org/downloads/ or run ```brew install python3``` on Macos if you have brew installed. 
-- Go into developer_project directory.
+- Go into developer_project directory and create a file called api_key.py and add your api key like so: API_KEY = <Your-API-KEY>
 - Create a virtual environment for the project folder by running this command: ```python3 -m venv <myenvname>``` or ```py -m venv <myenvname>```.
 - Once you have your virtual environment created, activate virtual env by running: ```source /<myenvname>/bin/activate``` in terminal or ```<myenvname>\Scripts\activate``` on windows cmd.
 - Download dependencies in the requirement.txt file by running this command: ```pip3 install -r requirements.txt```
