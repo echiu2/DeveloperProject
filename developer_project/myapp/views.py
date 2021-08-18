@@ -68,11 +68,13 @@ async def search(request):
 
         # return event loop to get all location weather information from api
         location_res = await asyncio.gather(*actions)
-        
+
         # Iterate through location information that correspondings to searched weather
         for location, data in zip(city_state, location_res):
+            #If api calls exceeds limit of 60 then api key will potentially be suspended and location_res returns 404 status code
             if data['cod'] == '404':
                 continue
+            #Check if searched string equals api response main weather
             elif data['weather'][0]['main'].lower() == search.lower():
                 weathers = {
                     'city': location[0],
@@ -81,6 +83,7 @@ async def search(request):
                     'wind': data['wind']['speed'],
                 }
                 res.append(weathers)
+            #Check if search equals atmosphere and get current location weather in atmosphere
             elif search.lower() == 'atmosphere' and data['weather'][0]['main'] in atmosphere:
                 weathers = {
                     'city': location[0],
