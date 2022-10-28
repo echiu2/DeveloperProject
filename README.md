@@ -41,6 +41,7 @@ Search Page: Displays locations that match the weather conditions searched.
 2. What are potential optimization opportunities?
 - Making a 250 requests required me to search weather asynchronously but imagine if there was over 10000 requests. I would have to split up my requests load and load items by batches instead of all at once. It also kind of makes sense in a design standpoint since no one is going to scroll through 10000 items quickly. This way allows users to read the current loaded items and scroll down if they want to look up more data.
 - We could store openweathermap or google sheet api data into database and query database in the backend to the frontend which could possibly speed up the overall website; although if one decides to change google sheet data by deleting or adding locations then those changes will not reflect in the frontend unless added to the database.
+- Create some kind of caching so that a user can check past requests within a certain time frame and possibly avoiding duplicate requests.
  
 3. What could break this current version?
 - A requests of 10000 api calls at a time may slow down or program or even break it. 
